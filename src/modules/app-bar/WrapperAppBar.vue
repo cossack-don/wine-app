@@ -83,9 +83,9 @@ export default {
     ...mapGetters(["GETTER_RETURN_ARRAY_WITH_TRUE_FAVORITES"]),
   },
   methods: {
-    ...mapActions(["ACTION_FLAG_FOR_BAR"]),
+    ...mapActions(["ACTION_FLAG_BTN_LEFT_SIDEBAR"]),
     chengeFlag() {
-      this.ACTION_FLAG_FOR_BAR();
+      this.ACTION_FLAG_BTN_LEFT_SIDEBAR();
     },
   },
   //   data: () => ({ drawer: null }),

@@ -28,7 +28,7 @@
           class="main-slider-country__image"
         />
         <br />
-        <router-link :to="{ path: item.pathPage }">
+        <router-link :to="{ path: '/' + item.pathPage }">
           <h3 class="text-lg-h6">{{ item.country }}</h3>
         </router-link>
       </div>
@@ -48,6 +48,7 @@ export default {
   computed: {
     ...mapGetters(["GETTER_RETURN_MAIN_ARRAY_FOR_SLIDER_COUNTRY"]),
   },
+  methods: {},
 };
 </script>
 

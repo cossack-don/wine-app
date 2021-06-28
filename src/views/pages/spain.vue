@@ -1,26 +1,43 @@
-
-
 <template>
   <div>
-    вина ispaniya
-    <!-- в цикл потом можно возвращать вместо store.state.arr[1] вот так берем arrItems и в getters или action -->
-    <!-- пробигаемся циклом find и сравниваем Франция === Франция, и отдаем этот массив в этот компонент -->
-    <div
-      class="card"
-      v-for="(item, index) in $store.state.arrayItems[1].items"
-      :key="index"
-    >
-      {{ item }}
-      <!-- {{ $store.state.arrayItems[0].items }}
-      console.log($store.state.arrayItems[0].items) -->
-
-      <router-link :to="`/spain/${item.id}`">{{ item.name }}</router-link>
-    </div>
+    <v-container>
+      <NavigationLinksPages />
+      <v-row>
+        <!-- адаптив https://vuetifyjs.com/en/components/grids/#usage -->
+        <v-col
+          class="card"
+          v-for="(item, index) in objectCountry.items"
+          :key="index"
+          cols="12"
+          :xl="2"
+          :lg="3"
+          :md="4"
+          :sm="6"
+          :xs="12"
+        >
+          <TemplateMiniItemWine :objectCountry="objectCountry" :item="item" />
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
 <script>
-export default {};
+import NavigationLinksPages from "@/components/NavigationLinksPages.vue";
+import TemplateMiniItemWine from "@/components/template-card-wine/TemplateItemWineMini.vue";
+import { mapGetters, mapActions, mapMutation, mapState } from "vuex";
+export default {
+  computed: {
+    ...mapState({
+      objectCountry: (state) => state.arrayItems[1],
+    }),
+  },
+  components: { NavigationLinksPages, TemplateMiniItemWine },
+
+  data() {
+    return {};
+  },
+};
 </script>
 
 <style>

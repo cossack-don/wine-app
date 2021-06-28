@@ -4,222 +4,19 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 // РАЗДЕЛАИТЬ КОМПОНЕНТЫ НА МОДУЛИ СТОРА
 // import gettersMainSliderCountry from '../store/components/main-slider-country/getters'
+
+import state from '@/store/mainDataArray/stateMain.js'
+
+
 export default new Vuex.Store({
-  state: {
-    arrayItems: [
-      {
-        country: 'Франция',
-        pathPage: 'france',
-        urlImageFlagCountry: require('../assets/flags/franciya.png'),
 
-        items: [
-          {
-            id: 1,
-            urlImageWineItem: require('../assets/item-test.png'),
-            name: 'Pinot Noir. 1500. Pago del Mare Nostrum',
-            sugar: 'Cухое',
-            capacity: '0.75',
-            colorWine: 'Красное',
-            // избранное
-            flagLikeWine: true
-          },
-          {
-            id: 2,
-            name: 'wine-2',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 3,
-            name: 'wine-3',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 4,
-            name: 'wine-3',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 5,
-            name: 'wine-3',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 6,
-            name: 'wine-3',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 7,
-            name: 'wine-3',
-            sugar: 'сухое',
-            flagLikeWine: false
-          }
-        ]
-      },
-      {
-        country: 'Испания',
-        pathPage: 'spain',
-        urlImageFlagCountry: require('../assets/flags/ispaniya.png'),
-        items: [
-          {
-            id: 1,
-            name: 'wine-1',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 2,
-            name: 'wine-2',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 3,
-            name: 'wine-3',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 4,
-            name: 'wine-4',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 5,
-            name: 'wine-5',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-        ]
-      },
-      {
-        country: 'Италия',
-        pathPage: 'italy ',
-        urlImageFlagCountry: require('../assets/flags/italiya.png'),
-        items: [
-          {
-            id: 1,
-            name: 'wine-1',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 2,
-            name: 'wine-2',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 3,
-            name: 'wine-3',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 4,
-            name: 'wine-4',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 5,
-            name: 'wine-5',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-        ]
-      },
-      {
-        country: 'Грузия',
-        pathPage: 'georgia ',
-        urlImageFlagCountry: require('../assets/flags/gryziya.png'),
-        items: [
-          {
-            id: 1,
-            name: 'wine-1',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 2,
-            name: 'wine-2',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 3,
-            name: 'wine-3',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 4,
-            name: 'wine-4',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 5,
-            name: 'wine-5',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-        ]
-      },
-      {
-        country: 'Германия',
-        pathPage: 'germany ',
-        urlImageFlagCountry: require('../assets/flags/germaniya.png'),
-        items: [
-          {
-            id: 1,
-            name: 'wine-1',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 2,
-            name: 'wine-2',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 3,
-            name: 'wine-3',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 4,
-            name: 'wine-4',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-          {
-            id: 5,
-            name: 'wine-5',
-            sugar: 'сухое',
-            flagLikeWine: false
-          },
-        ]
-      }
-    ],
+  state,
 
-    flagForBar: false,
-    arrayForFavorites: []
-
-  },
   mutations: {
-    MUTATION_FLAG_FOR_BAR(state) {
-      state.flagForBar = !state.flagForBar
+    MUTATION_FLAG_BTN_LEFT_SIDEBAR(state) {
+      state.flagBtnLeftSidebar = !state.flagBtnLeftSidebar
     },
-    MUTATION_LIKE(state, { itemIdWine, nameCountry }) {
+    MUTATION_ADD_FAVORITES(state, { itemIdWine, nameCountry }) {
       // console.log(itemIdWine, nameCountry)
       state.arrayItems.find(item => {
         if (item.country === nameCountry) {
@@ -227,7 +24,7 @@ export default new Vuex.Store({
           item.items.find(item => {
             if (item.id === itemIdWine) {
               // console.log(item.flagLikeWine = !item.flagLikeWine, 'id')
-              item.flagLikeWine = !item.flagLikeWine
+              item.flagFavoritesWine = !item.flagFavoritesWine
 
               // if (item.flagLikeWine) {
               //   console.log(3)
@@ -253,15 +50,15 @@ export default new Vuex.Store({
     // }
   },
   actions: {
-    ACTION_LIKE({ commit }, { itemIdWine, nameCountry }) {
+    ACTION_ADD_FAVORITES({ commit }, { itemIdWine, nameCountry }) {
       // console.log(itemIdWine, nameCountry)
 
       // делать проверку если страна франция и id == в array , то ставлю лайк
-      commit('MUTATION_LIKE', { itemIdWine, nameCountry })
+      commit('MUTATION_ADD_FAVORITES', { itemIdWine, nameCountry })
     },
 
-    ACTION_FLAG_FOR_BAR({ commit }) {
-      commit('MUTATION_FLAG_FOR_BAR')
+    ACTION_FLAG_BTN_LEFT_SIDEBAR({ commit }) {
+      commit('MUTATION_FLAG_BTN_LEFT_SIDEBAR')
     },
 
     // ACTION_RETURN_ALL_FAVORITES({ commit }) {
@@ -283,7 +80,7 @@ export default new Vuex.Store({
 
         item.items.forEach(item => {
 
-          if (item.flagLikeWine) {
+          if (item.flagFavoritesWine) {
 
             arrayItemWineWithTrueFavorites.push(item)
 

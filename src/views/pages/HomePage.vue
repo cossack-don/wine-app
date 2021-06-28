@@ -4,7 +4,6 @@
 
     <SliderCountryWines />
     <BtnLinkAllCountry />
-
     можно сделать, все вина перейдя на страницу будет сортировка по
     красным,белым, розовым, выбрать страну
     <!-- <globalComponentBtnLinkAllCountry /> -->

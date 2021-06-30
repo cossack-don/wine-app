@@ -1,10 +1,5 @@
 <template>
-  <v-navigation-drawer
-    v-model="$store.state.flagBtnLeftSidebar"
-    fixed
-    temporary
-  >
-    <!--  -->22
+  <v-navigation-drawer v-model="flagBtnLeftSidebar" fixed temporary>
   </v-navigation-drawer>
 </template>
 
@@ -13,10 +8,9 @@ import { mapGetters, mapActions, mapMutation, mapState } from "vuex";
 export default {
   computed: {
     ...mapState({
-      q: (state) => state.arrayItems[0],
+      flagBtnLeftSidebar: (state) => state.flagBtnLeftSidebar,
     }),
   },
-  created() {},
 };
 </script>
 

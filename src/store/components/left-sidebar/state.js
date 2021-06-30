@@ -1,3 +1,5 @@
-export default {
-    flagBtnLeftSidebar: true,
+const flagBtnLeftSidebar = {
+    flagBtnLeftSidebar: false,
 }
+
+export default flagBtnLeftSidebar

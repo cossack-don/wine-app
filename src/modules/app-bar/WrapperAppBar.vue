@@ -1,11 +1,13 @@
 <template>
   <v-app-bar app>
     <v-app-bar-nav-icon @click="chengeFlag"></v-app-bar-nav-icon>
+
     <router-link to="/favorites" class="d-flex justify-center align-center">
-      избранное</router-link
-    >
+      избранное
+    </router-link>
     {{ GETTER_RETURN_ARRAY_WITH_TRUE_FAVORITES.length }} шт
-    <v-toolbar-title class="ml-auto qq">
+
+    <v-toolbar-title class="ml-auto font-logo-name">
       <router-link to="/" class="d-flex justify-center align-center">
         <div class="logo-wine">
           <svg
@@ -78,17 +80,19 @@
 
 <script>
 import { mapGetters, mapActions, mapMutation, mapState } from "vuex";
+
 export default {
   computed: {
     ...mapGetters(["GETTER_RETURN_ARRAY_WITH_TRUE_FAVORITES"]),
   },
+
   methods: {
     ...mapActions(["ACTION_FLAG_BTN_LEFT_SIDEBAR"]),
+
     chengeFlag() {
       this.ACTION_FLAG_BTN_LEFT_SIDEBAR();
     },
   },
-  //   data: () => ({ drawer: null }),
 };
 </script>
 
@@ -97,7 +101,7 @@ export default {
   width: 40px;
   height: auto;
 }
-.qq {
+.font-logo-name {
   font-family: "Oswald", sans-serif !important;
 }
 </style>

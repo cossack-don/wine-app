@@ -25,6 +25,8 @@ const MUTATION_DELETE_ITEM_FROM_FAVORITES = (state, { idWine, nameCauntry }) => 
             if (item.id === idWine && item.countryInItem === nameCauntry) {
                 item.flagFavoritesWine = false
             }
+
+
             state.arrayForFavorites.push(item)
         })
     })

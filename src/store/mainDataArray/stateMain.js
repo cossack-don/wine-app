@@ -9,9 +9,11 @@ import arrayForFavorites from '@/store/components/template-card-wine-mini/state.
 
 const state = () => ({
 
-    arrayItems,
+    ...arrayItems,
     ...flagBtnLeftSidebar,
-    ...arrayForFavorites
+    ...arrayForFavorites,
+    mainSearchValue: '',
+    testArraySearch: []
 
 })
 

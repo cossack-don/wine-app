@@ -36,6 +36,7 @@
         />
       </slide>
     </carousel> -->
+    {{ t }}
   </div>
 </template>
 
@@ -53,6 +54,22 @@ export default {
     // Slide,
     SliderCountryWines,
     BtnLinkAllCountry,
+  },
+  computed: {
+    t() {
+      console.log(JSON.parse(localStorage.getItem("arrayItems")));
+    },
+  },
+  methods: {
+    testLocal() {
+      localStorage.setItem(
+        "arrayItems",
+        JSON.stringify(this.$store.state.arrayItems)
+      );
+    },
+  },
+  created() {
+    this.testLocal();
   },
 };
 </script>

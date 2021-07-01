@@ -17,7 +17,14 @@
         Избранное
       </router-link>
     </div>
-
+    <div>
+      <input
+        type="text"
+        placeholder="Название вина"
+        v-model="mainSearchValue"
+      />
+      {{ $store.state.testArraySearch }}
+    </div>
     <v-toolbar-title class="ml-auto font-logo-name">
       <router-link to="/" class="d-flex justify-center align-center">
         <div class="logo-wine">
@@ -95,6 +102,14 @@ import { mapGetters, mapActions, mapMutation, mapState } from "vuex";
 export default {
   computed: {
     ...mapGetters(["GETTER_RETURN_ARRAY_WITH_TRUE_FAVORITES"]),
+    mainSearchValue: {
+      get() {
+        return this.$store.state.mainSearchValue;
+      },
+      set(value) {
+        this.$store.commit("MUTATION_SEARCH_WINE", value);
+      },
+    },
   },
 
   methods: {

@@ -7,7 +7,7 @@ export default {
         {
             id: 1,
             urlImageWineItem: require('@/assets/item-test.png'),
-            name: 'Pinot Noir. 1500. Pago del Mare Nostrum',
+            name: 'Pinot Noir. 1500. Pago del Mare Nostrum2',
             sugar: 'Cухое',
             capacity: '0.75',
             colorWine: 'Красное',

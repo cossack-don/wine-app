@@ -13,7 +13,8 @@ const state = () => ({
     ...flagBtnLeftSidebar,
     ...arrayForFavorites,
     mainSearchValue: '',
-    testArraySearch: []
+    testArraySearch: [],
+    T: []
 
 })
 

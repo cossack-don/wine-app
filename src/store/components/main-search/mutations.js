@@ -1,15 +1,42 @@
 
+import arrayNamesItemsAllCoyntry from '@/store/mainDataArray/country/index.js'
 import allItemsAllCountry from '@/store/mainDataArray/country/index.js'
 
 export default function MUTATION_SEARCH_WINE(state, value) {
+    allItemsAllCountry
+    // if (value === '') {
+    //     state.T = []
+    //     return false
+    // }
+    state.mainSearchValue = value
+    // console.log(arrayNamesItemsAllCoyntry.arrayNamesItemsAllCoyntry)
 
-    // ПОИСК НЕ ДОДЕЛАЛ
-    if (value) {
+    state.testArraySearch = arrayNamesItemsAllCoyntry.arrayNamesItemsAllCoyntry.
+        filter(name => {
 
-        allItemsAllCountry.allItemsAllCountry.forEach(item => {
-            // https://github.com/cossack-don/it-words/blob/main/src/store/mutatuins/mutatuins.js
-            console.log(item.name.toLowerCase().includes(state.mainSearchValue.trim().toLowerCase()))
-            // state.testArraySearch.push(item.name.toLowerCase().includes(state.mainSearchValue.trim().toLowerCase()))
+            return name.toLowerCase().includes(state.mainSearchValue.toLowerCase())
         })
-    }
+
+
+    console.log(state.testArraySearch)
+    console.log(allItemsAllCountry.allItemsAllCountry)
+
+    state.testArraySearch.forEach(nameWineSearch => {
+        allItemsAllCountry.allItemsAllCountry.find(item => {
+
+            // if (state.T.includes(item)) {
+            //     console.log(99)
+            //     return
+            // }
+            // if (state.testArraySearch.length < 1) {
+            //     return false
+            // }
+            if (nameWineSearch === item.name) {
+
+
+                state.T.push(item)
+            }
+        })
+    })
+
 }

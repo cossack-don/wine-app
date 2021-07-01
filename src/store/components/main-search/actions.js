@@ -1,3 +1,3 @@
-// export default function ACTION_FLAG_BTN_LEFT_SIDEBAR({ commit }) {
-//     commit('MUTATION_FLAG_BTN_LEFT_SIDEBAR')
-// }
+export default function ACTION_MUTATION_SEARCH_WINE({ commit }, value) {
+    commit('MUTATION_SEARCH_WINE', value)
+}

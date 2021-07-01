@@ -17,13 +17,16 @@
         Избранное
       </router-link>
     </div>
-    <div>
-      <input
+    <div class="wrapper-main-search">
+      <v-text-field
         type="text"
         placeholder="Название вина"
         v-model="mainSearchValue"
-      />
-      {{ $store.state.testArraySearch }}
+      ></v-text-field>
+      <!-- {{ $store.state.testArraySearch }} -->
+      <router-link to="/search-page"
+        >Нашло совпадений {{ $store.state.testArraySearch.length }}</router-link
+      >
     </div>
     <v-toolbar-title class="ml-auto font-logo-name">
       <router-link to="/" class="d-flex justify-center align-center">
@@ -102,18 +105,23 @@ import { mapGetters, mapActions, mapMutation, mapState } from "vuex";
 export default {
   computed: {
     ...mapGetters(["GETTER_RETURN_ARRAY_WITH_TRUE_FAVORITES"]),
+
     mainSearchValue: {
       get() {
         return this.$store.state.mainSearchValue;
       },
       set(value) {
-        this.$store.commit("MUTATION_SEARCH_WINE", value);
+        this.ACTION_MUTATION_SEARCH_WINE(value);
+        // this.$store.commit("MUTATION_SEARCH_WINE", value);
       },
     },
   },
 
   methods: {
-    ...mapActions(["ACTION_FLAG_BTN_LEFT_SIDEBAR"]),
+    ...mapActions([
+      "ACTION_FLAG_BTN_LEFT_SIDEBAR",
+      "ACTION_MUTATION_SEARCH_WINE",
+    ]),
 
     chengeFlag() {
       this.ACTION_FLAG_BTN_LEFT_SIDEBAR();
@@ -123,6 +131,11 @@ export default {
 </script>
 
 <style>
+.wrapper-main-search {
+  margin: 0 auto;
+  background: pink;
+  display: flex;
+}
 .logo-wine svg {
   width: 40px;
   height: auto;

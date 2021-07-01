@@ -1,3 +1,6 @@
-export default function ACTION_FLAG_BTN_LEFT_SIDEBAR({ commit }) {
+
+const ACTION_FLAG_BTN_LEFT_SIDEBAR = ({ commit }) => {
     commit('MUTATION_FLAG_BTN_LEFT_SIDEBAR')
 }
+
+export default ACTION_FLAG_BTN_LEFT_SIDEBAR

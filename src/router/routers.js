@@ -20,6 +20,12 @@ const routes = [
         name: 'favorites',
         component: () => import(/* webpackChunkName: "about" */ '../views/pages/Favorites.vue')
     },
+    // search-page
+    {
+        path: '/search-page',
+        name: 'search-page',
+        component: () => import(/* webpackChunkName: "about" */ '../views/pages/SearchPage.vue')
+    },
 
 ];
 

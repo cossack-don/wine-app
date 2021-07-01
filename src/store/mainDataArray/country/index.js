@@ -24,4 +24,8 @@ const allItemsAllCountry = [
     ...objectCountryGermany.items
 ]
 
-export default { arrayItems, allItemsAllCountry }
+const arrayNamesItemsAllCoyntry = allItemsAllCountry.map(item => {
+    return item.name
+})
+
+export default { arrayItems, arrayNamesItemsAllCoyntry, allItemsAllCountry }

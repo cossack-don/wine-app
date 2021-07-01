@@ -18,44 +18,51 @@ export default {
             gastronomy: 'Отлично сочетается с блюдами из дичи, с жареным или тушеным мясом, с выдержанными сырами.',
             varietalComposition: 'Пино Нуар',
             timeOfOrigin: '6 месяцев в емкостях из нержавеющей стали.',
-            brend: 'Ducento'
+            brend: 'Ducento',
+            countryInItem: "Франция"
 
         },
         {
             id: 2,
             name: 'wine-2',
             sugar: 'сухое',
-            flagFavoritesWine: false
+            flagFavoritesWine: false,
+            countryInItem: "Франция"
         },
         {
             id: 3,
             name: 'wine-3',
             sugar: 'сухое',
-            flagFavoritesWine: false
+            flagFavoritesWine: false,
+            countryInItem: "Франция"
         },
         {
             id: 4,
             name: 'wine-3',
             sugar: 'сухое',
-            flagFavoritesWine: false
+            flagFavoritesWine: false,
+            countryInItem: "Франция"
         },
         {
             id: 5,
             name: 'wine-3',
             sugar: 'сухое',
-            flagFavoritesWine: false
+            flagFavoritesWine: false,
+            countryInItem: "Франция"
         },
         {
             id: 6,
             name: 'wine-3',
             sugar: 'сухое',
-            flagFavoritesWine: false
+            flagFavoritesWine: false,
+            countryInItem: "Франция"
         },
         {
             id: 7,
             name: 'wine-3',
             sugar: 'сухое',
-            flagFavoritesWine: false
+            flagFavoritesWine: false,
+            countryInItem: "Франция"
         }
     ]
 

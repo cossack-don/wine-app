@@ -12,31 +12,36 @@ export default {
             capacity: '0.75',
             colorWine: 'Красное',
             // избранное
-            flagFavoritesWine: false
+            flagFavoritesWine: false,
+            countryInItem: "Испания"
         },
         {
             id: 2,
             name: 'wine-2',
             sugar: 'сухое',
-            flagFavoritesWine: true
+            flagFavoritesWine: true,
+            countryInItem: "Испания"
         },
         {
             id: 3,
             name: 'wine-3',
             sugar: 'сухое',
-            flagFavoritesWine: false
+            flagFavoritesWine: false,
+            countryInItem: "Испания"
         },
         {
             id: 4,
             name: 'wine-4',
             sugar: 'сухое',
-            flagFavoritesWine: false
+            flagFavoritesWine: false,
+            countryInItem: "Испания"
         },
         {
             id: 5,
             name: 'wine-5',
             sugar: 'сухое',
-            flagFavoritesWine: false
+            flagFavoritesWine: false,
+            countryInItem: "Испания"
         },
     ]
 }

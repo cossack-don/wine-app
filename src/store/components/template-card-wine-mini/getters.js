@@ -1,20 +1,24 @@
 const GETTER_RETURN_ARRAY_WITH_TRUE_FAVORITES = (state) => {
 
-    let arrayItemWineWithTrueFavorites = []
+    state.arrayForFavorites = []
 
-    state.arrayItems.forEach(item => {
+    state.arrayItems.forEach(itemObj => {
 
-        item.items.forEach(item => {
+        itemObj.items.forEach(item => {
 
             if (item.flagFavoritesWine) {
+                if (item.countryInItem === itemObj.country) {
+                    // получаю путь страны из родителя, добавляю в карточку
+                    item.pathPage = itemObj.pathPage
+                }
 
-                arrayItemWineWithTrueFavorites.push(item)
+                state.arrayForFavorites.push(item)
 
             }
         })
     })
 
-    return arrayItemWineWithTrueFavorites
+    return state.arrayForFavorites
 
 }
 

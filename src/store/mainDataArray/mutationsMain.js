@@ -8,7 +8,7 @@ import MUTATION_ADD_FAVORITES from '@/store/components/template-card-wine-mini/m
 
 const mutations = {
     MUTATION_FLAG_BTN_LEFT_SIDEBAR,
-    MUTATION_ADD_FAVORITES
+    ...MUTATION_ADD_FAVORITES
 }
 
 

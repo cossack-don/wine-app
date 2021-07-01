@@ -6,19 +6,19 @@ const routes = [
     {
         path: '/',
         name: 'Home',
-        component: () => import(/* webpackChunkName: "home" */ '@/views/pages/HomePage.vue')
+        component: () => import(/* webpackChunkName: "about" */ '@/views/pages/HomePage.vue')
     },
     {
         // все страны
         path: '/all-country',
         name: 'all-country',
-        component: () => import('../views/pages/PageAllCountry.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../views/pages/PageAllCountry.vue')
     },
     {
         // страница избранное
         path: '/favorites',
         name: 'favorites',
-        component: () => import('../views/pages/Favorites.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../views/pages/Favorites.vue')
     },
 
 ];
@@ -36,7 +36,7 @@ routersSpainCountry.forEach(item => {
 routes.push({
     path: '*',
     name: 'not-found-page',
-    component: () => import('@/views/pages/NotFoundPage.vue')
+    component: () => import(/* webpackChunkName: "about" */ '@/views/pages/NotFoundPage.vue')
 
 });
 

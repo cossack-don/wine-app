@@ -75,6 +75,7 @@ export default {
     ...mapActions(["ACTION_ADD_FAVORITES"]),
 
     addFavorites(itemIdWine, nameCountry) {
+      // console.log(itemIdWine);
       this.ACTION_ADD_FAVORITES({ itemIdWine, nameCountry });
     },
   },

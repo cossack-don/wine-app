@@ -36,10 +36,6 @@ export default {
     }),
   },
   components: { NavigationLinksPages, TemplateMiniItemWine },
-
-  data() {
-    return { page: 1 };
-  },
 };
 </script>
 

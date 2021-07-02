@@ -1,42 +1,37 @@
 
 import arrayNamesItemsAllCoyntry from '@/store/mainDataArray/country/index.js'
-import allItemsAllCountry from '@/store/mainDataArray/country/index.js'
+// import allItemsAllCountry from '@/store/mainDataArray/country/index.js'
 
 export default function MUTATION_SEARCH_WINE(state, value) {
-    allItemsAllCountry
-    // if (value === '') {
-    //     state.T = []
-    //     return false
-    // }
+
+
     state.mainSearchValue = value
-    // console.log(arrayNamesItemsAllCoyntry.arrayNamesItemsAllCoyntry)
 
-    state.testArraySearch = arrayNamesItemsAllCoyntry.arrayNamesItemsAllCoyntry.
+
+    state.ArrayWithNameWineInSearch = arrayNamesItemsAllCoyntry.arrayNamesItemsAllCoyntry.
         filter(name => {
-
+            // console.log('includ-filter', name.toLowerCase().includes(state.mainSearchValue.toLowerCase()))
             return name.toLowerCase().includes(state.mainSearchValue.toLowerCase())
         })
 
 
-    console.log(state.testArraySearch)
-    console.log(allItemsAllCountry.allItemsAllCountry)
+    // console.log('array-name', state.ArrayWithNameWineInSearch)
+    // console.log('all-items', allItemsAllCountry.allItemsAllCountry)
 
-    state.testArraySearch.forEach(nameWineSearch => {
-        allItemsAllCountry.allItemsAllCountry.find(item => {
+    // console.log(state.arrayItems)
+    state.arrayResultSearchItemsWine = []
+    state.ArrayWithNameWineInSearch.forEach(itemWord => {
 
-            // if (state.T.includes(item)) {
-            //     console.log(99)
-            //     return
-            // }
-            // if (state.testArraySearch.length < 1) {
-            //     return false
-            // }
-            if (nameWineSearch === item.name) {
-
-
-                state.T.push(item)
-            }
+        state.arrayItems.forEach(itemObj => {
+            itemObj.items.filter(itemWine => {
+                if (itemWord === itemWine.name) {
+                    state.arrayResultSearchItemsWine.push(itemWine)
+                    // console.log(itemWine)
+                }
+            })
         })
     })
+    console.log(state.arrayResultSearchItemsWine)
+
 
 }

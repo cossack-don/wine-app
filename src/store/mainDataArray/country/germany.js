@@ -5,31 +5,31 @@ export default {
     items: [
         {
             id: 1,
-            name: 'wine-1',
+            name: 'winewegarht-1',
             sugar: 'сухое',
             flagFavoritesWine: false
         },
         {
             id: 2,
-            name: 'wine-2',
+            name: 'wine-wefdb2',
             sugar: 'сухое',
             flagFavoritesWine: false
         },
         {
             id: 3,
-            name: 'wine-3',
+            name: 'wine-3wgwgw',
             sugar: 'сухое',
             flagFavoritesWine: false
         },
         {
             id: 4,
-            name: 'wine-4',
+            name: 'wine-4gjgjghjgj',
             sugar: 'сухое',
             flagFavoritesWine: false
         },
         {
             id: 5,
-            name: 'wine-5',
+            name: 'wine-5trggw',
             sugar: 'сухое',
             flagFavoritesWine: false
         },

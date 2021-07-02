@@ -24,42 +24,42 @@ export default {
         },
         {
             id: 2,
-            name: 'wine-2',
+            name: 'wine-21',
             sugar: 'сухое',
             flagFavoritesWine: false,
             countryInItem: "Франция"
         },
         {
             id: 3,
-            name: 'wine-3',
+            name: 'wine-33',
             sugar: 'сухое',
             flagFavoritesWine: false,
             countryInItem: "Франция"
         },
         {
             id: 4,
-            name: 'wine-3',
+            name: 'wine-333',
             sugar: 'сухое',
             flagFavoritesWine: false,
             countryInItem: "Франция"
         },
         {
             id: 5,
-            name: 'wine-3',
+            name: 'wine-3333333',
             sugar: 'сухое',
             flagFavoritesWine: false,
             countryInItem: "Франция"
         },
         {
             id: 6,
-            name: 'wine-3',
+            name: 'wine-151513513',
             sugar: 'сухое',
             flagFavoritesWine: false,
             countryInItem: "Франция"
         },
         {
             id: 7,
-            name: 'wine-3',
+            name: 'wine-15151d1d3',
             sugar: 'сухое',
             flagFavoritesWine: false,
             countryInItem: "Франция"

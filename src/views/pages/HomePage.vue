@@ -36,7 +36,7 @@
         />
       </slide>
     </carousel> -->
-    {{ t }}
+    <!-- {{ t }} -->
   </div>
 </template>
 
@@ -56,20 +56,20 @@ export default {
     BtnLinkAllCountry,
   },
   computed: {
-    t() {
-      console.log(JSON.parse(localStorage.getItem("arrayItems")));
-    },
+    // t() {
+    //   console.log(JSON.parse(localStorage.getItem("arrayItems")));
+    // },
   },
   methods: {
-    testLocal() {
-      localStorage.setItem(
-        "arrayItems",
-        JSON.stringify(this.$store.state.arrayItems)
-      );
-    },
+    // testLocal() {
+    //   localStorage.setItem(
+    //     "arrayItems",
+    //     JSON.stringify(this.$store.state.arrayItems)
+    //   );
+    // },
   },
   created() {
-    this.testLocal();
+    // this.testLocal();
   },
 };
 </script>

@@ -7,14 +7,21 @@ import flagBtnLeftSidebar from '@/store/components/left-sidebar/state.js'
 import arrayForFavorites from '@/store/components/template-card-wine-mini/state.js'
 
 
+
 const state = () => ({
 
     ...arrayItems,
     ...flagBtnLeftSidebar,
     ...arrayForFavorites,
+
+    // ------------------------------
+    ArrayWithNameWineInSearch: [],
     mainSearchValue: '',
-    testArraySearch: [],
-    T: []
+    arrayResultSearchItemsWine: []
+    // import objectStateMainSearchHeader from '@/store/components/main-search/state.js'
+    // objectStateMainSearchHeader,
+    // ------------------------------
+
 
 })
 

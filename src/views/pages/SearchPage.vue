@@ -1,19 +1,12 @@
 <template>
   <div>
-    <!-- {{ $store.state.testArraySearch }} -->
-    <!-- {{ $store.state.T }} -->
-    <!-- <div v-for="(item, index) in $store.state.T" :key="index">
-      {{ item.name }}-{{ item.countryInItem }}
-    </div> -->
-    {{ $store.state.testArraySearch }}
     <v-container>
       <!-- навигация -->
       <!-- <NavigationLinksPages /> -->
-      <v-row>
-        <!-- адаптив https://vuetifyjs.com/en/components/grids/#usage -->
+      <v-row v-if="$store.state.arrayResultSearchItemsWine.length">
         <v-col
           class="card"
-          v-for="(item, index) in $store.state.T"
+          v-for="(item, index) in $store.state.arrayResultSearchItemsWine"
           :key="index"
           cols="12"
           :xl="2"
@@ -22,7 +15,7 @@
           :sm="6"
           :xs="12"
         >
-          {{ $store.state.T.length }}
+          {{ $store.state.arrayResultSearchItemsWine.length }}
           <v-hover v-slot="{ hover }" open-delay="200">
             <v-card
               :elevation="hover ? 16 : 2"
@@ -68,22 +61,13 @@
           </v-hover>
         </v-col>
       </v-row>
+      <v-row v-else><v-col>Cовпадений нет</v-col></v-row>
     </v-container>
   </div>
 </template>
 
 <script>
-export default {
-  //     testArray.forEach(nameWineString=> {
-  // arrayItems.forEach(objectCountry => {
-  //     objectCountry.items.find(itemWine => {
-  //         if(itemWine.name === nameWineString) {
-  //             console.log(itemWine)
-  //         }
-  //     })
-  // })
-  // })
-};
+export default {};
 </script>
 
 <style>
@@ -101,11 +85,6 @@ export default {
 .template-item-wine__link:hover {
   text-decoration: none;
 }
-
-/* .template-item-wine:hover .template-item-wine__icon-favorites {
-  transition: 0.5s;
-  opacity: 1;
-} */
 
 .template-item-wine__image {
   width: auto;

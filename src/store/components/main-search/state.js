@@ -1,5 +1,10 @@
-// const flagBtnLeftSidebar = {
-//     flagBtnLeftSidebar: false,
+// const ArrayWithNameWineInSearch = {
+//     ArrayWithNameWineInSearch: [],
 // }
-
-// export default flagBtnLeftSidebar
+// const mainSearchValue = {
+//     mainSearchValue: ''
+// }
+// const arrayResultSearchItemsWine = {
+//     arrayResultSearchItemsWine: []
+// }
+// export default { ArrayWithNameWineInSearch, mainSearchValue, arrayResultSearchItemsWine }

@@ -17,28 +17,28 @@ export default {
         },
         {
             id: 2,
-            name: 'wine-2',
+            name: 'wine-2efweweweqqqqqq',
             sugar: 'сухое',
             flagFavoritesWine: true,
             countryInItem: "Испания"
         },
         {
             id: 3,
-            name: 'wine-3',
+            name: 'wine-sfsfsfsqqqq3',
             sugar: 'сухое',
             flagFavoritesWine: false,
             countryInItem: "Испания"
         },
         {
             id: 4,
-            name: 'wine-4',
+            name: 'wine-4fffffffs',
             sugar: 'сухое',
             flagFavoritesWine: false,
             countryInItem: "Испания"
         },
         {
             id: 5,
-            name: 'wine-5',
+            name: 'wine-5hhhhhhhhhh',
             sugar: 'сухое',
             flagFavoritesWine: false,
             countryInItem: "Испания"

@@ -23,3 +23,23 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 <!-- 
 https://ssense.github.io/vue-carousel/
 SLIDER -->
+
+
+<!-- _________________________________________________________________ -->
+<!-- LINKS VUETIFY  ЧТО МОЖНО ДОБАВИТЬ ИЗ ФУНКЦИОНАЛА, ПОЛЕЗНЫЕ ССЫЛКИ -->
+
+<!-- ИКОНКИ MDI https://petershaggynoble.github.io/MDI-Sandbox/ -->
+
+<!-- https://vuetifyjs.com/en/components/badges/#customization-options   МОЖНО ИСПОЛЬЗОВАТЬ ДЛЯ ЛАЙКОВ -->
+
+
+<!-- https://vuetifyjs.com/en/components/footer/#teal-footer   FOOTER -->
+
+
+<!-- https://vuetifyjs.com/en/components/breadcrumbs/#item   ХЛЕБНЫЕ КРОШКИ - ДЛЯ НАВИГАЦИИ -->
+
+<!-- https://vuetifyjs.com/en/components/dialogs/#without-activator   Выпадающие окна- формы -->
+
+<!-- https://vuetifyjs.com/en/components/expansion-panels/#usage АККАРДЕОНЫ ДЛЯ ИТЕМОВ -->
+
+<!-- https://vuetifyjs.com/en/components/paginations/#api  ПАГИНАЦИЯ -->

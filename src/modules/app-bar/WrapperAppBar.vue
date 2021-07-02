@@ -6,6 +6,15 @@
     <SearchInput />
     <ResultSearchLink />
 
+    <!-- https://vuetifyjs.com/en/features/theme/#customizing -->
+    <!-- смена темы -->
+    <v-switch
+      v-model="$vuetify.theme.dark"
+      hint="Цвет темы"
+      inset
+      persistent-hint
+    ></v-switch>
+
     <v-toolbar-title class="ml-auto font-logo-name">
       <LogoLinkHome />
     </v-toolbar-title>

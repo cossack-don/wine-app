@@ -30,6 +30,36 @@
                   width="100"
                   class="ma-3"
                 />
+                <v-row justify="center">
+                  <v-dialog v-model="dialog" width="600px">
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-btn color="primary" dark v-bind="attrs" v-on="on">
+                        увеличиваем фото вина<v-icon>mdi-magnify-plus</v-icon>
+                      </v-btn>
+                    </template>
+                    <v-card
+                      class="d-flex justify-center flex-column align-center"
+                    >
+                      <v-btn
+                        color="primary"
+                        fab
+                        small
+                        dark
+                        class="ml-auto mr-2 mt-2 zz"
+                        @click="dialog = false"
+                      >
+                        <v-icon>mdi-close</v-icon>
+                      </v-btn>
+                      <img
+                        :src="item.urlImageWineItem"
+                        alt=""
+                        width="60%"
+                        height="auto"
+                        class="ma-3"
+                      />
+                    </v-card>
+                  </v-dialog>
+                </v-row>
               </div>
 
               <ul class="mt-15 pa-5 mr-auto list-wine-characteristics">
@@ -57,6 +87,7 @@
                   <v-icon>mdi-percent-outline</v-icon>13%
                 </li>
               </ul>
+
               <div class="mt-15 pa-5">
                 <div class="d-flex">
                   <img :src="flagCountry" alt="" width="30" height="auto" />
@@ -111,6 +142,7 @@ export default {
       urlCountry: "",
       mapCountry: "",
       flagCountry: "",
+      dialog: false,
     };
   },
   created() {
@@ -160,6 +192,11 @@ export default {
 </script>
 
 <style>
+.zz {
+  position: sticky;
+  top: 15px;
+  right: 15px;
+}
 .ccc {
   width: 50%;
   background: #f5f5f5;

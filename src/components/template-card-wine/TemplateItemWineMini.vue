@@ -47,12 +47,14 @@
           class="template-item-wine__image"
         />
 
-        <h3 class="text-center pa-3 black--text">{{ item.name }}</h3>
+        <h3 class="text-center pa-3 black--text template-item-wine__title">
+          {{ item.name }}
+        </h3>
         <div class="d-flex">
           <p class="mb-0 mr-2 blue-grey--text">{{ objectCountry.country }},</p>
           <p class="mb-0 mr-2 blue-grey--text">{{ item.colorWine }},</p>
           <p class="mb-0 mr-2 blue-grey--text">{{ item.sugar }},</p>
-          <p class="mb-0 mr-2 blue-grey--text">{{ item.capacity }} л.</p>
+          <p class="mb-0 blue-grey--text">{{ item.capacity }} л.</p>
         </div>
       </router-link>
 
@@ -120,5 +122,9 @@ export default {
 
 .template-item-wine__icon-favorites:hover {
   cursor: pointer;
+}
+
+.template-item-wine__title {
+  height: 70px;
 }
 </style>

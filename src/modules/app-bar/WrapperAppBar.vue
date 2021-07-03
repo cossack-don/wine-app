@@ -5,22 +5,13 @@
     <FavoritesCounterIcon />
     <SearchInput />
     <ResultSearchLink />
-
-    <!-- https://vuetifyjs.com/en/features/theme/#customizing -->
-    <!-- смена темы -->
-    <v-switch
-      v-model="$vuetify.theme.dark"
-      hint="Цвет темы"
-      inset
-      persistent-hint
-    ></v-switch>
+    <SwitchModeTheme />
 
     <v-toolbar-title class="ml-auto font-logo-name">
       <LogoLinkHome />
     </v-toolbar-title>
   </v-app-bar>
 </template>
-
 <script>
 import { mapGetters, mapActions, mapMutation, mapState } from "vuex";
 // components
@@ -28,6 +19,7 @@ import SearchInput from "@/components/app-bar/SearchInput.vue";
 import ResultSearchLink from "@/components/app-bar/ResultSearchLink.vue";
 import LogoLinkHome from "@/components/app-bar/LogoLinkHome.vue";
 import FavoritesCounterIcon from "@/components/app-bar/FavoritesCounterIcon.vue";
+import SwitchModeTheme from "@/components/app-bar/SwitchModeTheme.vue";
 
 export default {
   components: {
@@ -35,6 +27,7 @@ export default {
     ResultSearchLink,
     LogoLinkHome,
     FavoritesCounterIcon,
+    SwitchModeTheme,
   },
 
   methods: {

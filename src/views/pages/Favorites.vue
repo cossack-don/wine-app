@@ -1,8 +1,5 @@
 <template>
   <v-container>
-    <!-- навигация -->
-    <!-- <NavigationLinksPages /> -->
-
     <v-row v-if="GETTER_RETURN_ARRAY_WITH_TRUE_FAVORITES.length">
       <!-- адаптив https://vuetifyjs.com/en/components/grids/#usage -->
       <v-col

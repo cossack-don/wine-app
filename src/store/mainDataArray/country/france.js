@@ -24,16 +24,34 @@ export default {
         },
         {
             id: 2,
-            name: 'wine-21',
-            sugar: 'сухое',
-            flagFavoritesWine: false,
+            urlImageWineItem: require('@/assets/t.png'),
+            name: 'Mezzodi. Bolgheri. Batzella',
+            sugar: 'Cухое',
+            capacity: '0.75',
+            colorWine: 'Красное',
+            // избранное
+            flagFavoritesWine: true,
+            tastingCharacteristics: 'Вино золотисто-соломенного цвета с медными отблесками обладает ароматом цитрусов с оттенками дымки и минеральными нотками. Долгоиграющие пузырьки красиво искрятся в бокале. Вкус фруктовый, элегантный, с приятной кислинкой и продолжительным послевкусием.',
+            gastronomy: 'Отлично сочетается с блюдами из дичи, с жареным или тушеным мясом, с выдержанными сырами.',
+            varietalComposition: 'Пино Нуар',
+            timeOfOrigin: '6 месяцев в емкостях из нержавеющей стали.',
+            brend: 'Ducento',
             countryInItem: "Франция"
         },
         {
             id: 3,
-            name: 'wine-33',
-            sugar: 'сухое',
-            flagFavoritesWine: false,
+            urlImageWineItem: require('@/assets/5100.png'),
+            name: 'Dolcetto. Ascheri',
+            sugar: 'Cухое',
+            capacity: '0.75',
+            colorWine: 'Красное',
+            // избранное
+            flagFavoritesWine: true,
+            tastingCharacteristics: 'Вино золотисто-соломенного цвета с медными отблесками обладает ароматом цитрусов с оттенками дымки и минеральными нотками. Долгоиграющие пузырьки красиво искрятся в бокале. Вкус фруктовый, элегантный, с приятной кислинкой и продолжительным послевкусием.',
+            gastronomy: 'Отлично сочетается с блюдами из дичи, с жареным или тушеным мясом, с выдержанными сырами.',
+            varietalComposition: 'Пино Нуар',
+            timeOfOrigin: '6 месяцев в емкостях из нержавеющей стали.',
+            brend: 'Ducento',
             countryInItem: "Франция"
         },
         {

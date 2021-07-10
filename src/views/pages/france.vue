@@ -2,8 +2,6 @@
   <div>
     <div class="text-center"></div>
     <v-container>
-      <!-- навигация -->
-      <NavigationLinksPages />
       <v-row>
         <!-- адаптив https://vuetifyjs.com/en/components/grids/#usage -->
         <v-col
@@ -25,7 +23,6 @@
 </template>
 
 <script>
-import NavigationLinksPages from "@/components/NavigationLinksPages.vue";
 import TemplateMiniItemWine from "@/components/template-card-wine/TemplateItemWineMini.vue";
 import { mapGetters, mapActions, mapMutation, mapState } from "vuex";
 
@@ -35,7 +32,7 @@ export default {
       objectCountry: (state) => state.arrayItems[0],
     }),
   },
-  components: { NavigationLinksPages, TemplateMiniItemWine },
+  components: { TemplateMiniItemWine },
 };
 </script>
 

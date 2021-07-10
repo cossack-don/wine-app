@@ -35,7 +35,7 @@
 <script>
 import lodashFunction_range from "lodash/range";
 import lodashFunction_slice from "lodash/slice";
-
+// НУЖНО ПЕРЕНОСИТЬ В СТОР И ПРОДУМАТЬ ГДЕ ОТОБРАЖАТЬ И КАК ОТОБРАЖАТЬ ПАГИНАЦИЮ И КАК БЫТЬ ПО СТРАНАМ В ОТДЕЛЬНОСТИ
 export default {
   data() {
     return {

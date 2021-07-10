@@ -14,9 +14,8 @@
         "
         cols="12"
       >
-        <div v-for="(link, index) in links" :key="index">
-          <FooterLinks :link="link" />
-        </div>
+        <NavigationLinks />
+
         <FooterHandlerDashbord />
       </v-col>
     </v-row>
@@ -24,34 +23,15 @@
 </template>
 
 <script>
-import FooterLinks from "@/components/footer/FooterLinks.vue";
+import NavigationLinks from "@/modules/main-content/NavigationLinks.vue";
 import FooterHandlerDashbord from "@/components/footer/FooterHandlerDashbord.vue";
 export default {
   components: {
-    FooterLinks,
+    NavigationLinks,
     FooterHandlerDashbord,
   },
   data() {
-    return {
-      links: [
-        {
-          name: "Главная",
-          url: "/",
-        },
-        {
-          name: "Все страны",
-          url: "/all-country",
-        },
-        {
-          name: "Избранное",
-          url: "/favorites",
-        },
-        {
-          name: "Поиск по товару",
-          url: "/search-page",
-        },
-      ],
-    };
+    return {};
   },
 };
 </script>

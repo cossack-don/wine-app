@@ -29,12 +29,15 @@
             "
           >
             <!-- block-icon-favorites -->
-            <div
+
+            <v-icon
               class="template-item-wine__icon-favorites ml-auto mr-3"
               @click="deleteItemFromFavorites(item.id, item.countryInItem)"
+              large
+              color="blue "
             >
-              <v-icon large color="blue "> mdi-close-circle-outline </v-icon>
-            </div>
+              mdi-close-circle-outline
+            </v-icon>
 
             <!-- link :to="`/${pathForUrlCountry(index)}/${id}`"-->
             <router-link
@@ -48,7 +51,9 @@
                 class="template-item-wine__image"
               />
 
-              <h3 class="text-center pa-3 black--text">{{ item.name }}</h3>
+              <h3 class="text-center favorits-title-wine pa-3 black--text">
+                {{ item.name }}
+              </h3>
               <div class="d-flex">
                 <p class="mb-0 mr-2 blue-grey--text">
                   {{ item.countryInItem }},
@@ -142,4 +147,7 @@ export default {
 </script>
 
 <style>
+.favorits-title-wine {
+  height: 70px;
+}
 </style>

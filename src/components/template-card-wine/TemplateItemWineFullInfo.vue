@@ -4,12 +4,11 @@
       <v-row>
         <v-col cols="12" class="mx-auto my-0">
           <div class="d-flex">
-            <NavigationLinksPages />
             <router-link
               :to="`/${urlCountry}`"
               class="home-page__link-all-country d-block mt-4"
             >
-              Вина {{ russianNameCountry }}
+              Все позиции {{ russianNameCountry }}
             </router-link>
           </div>
           <v-card
@@ -130,11 +129,10 @@
 </template>
 
 <script>
-import NavigationLinksPages from "@/components/NavigationLinksPages.vue";
 import SliderCountryWines from "@/components/pageHome/SliderCountryWines";
 export default {
   computed: {},
-  components: { NavigationLinksPages, SliderCountryWines },
+  components: { SliderCountryWines },
   data() {
     return {
       arr: {},

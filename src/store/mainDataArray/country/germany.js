@@ -1,37 +1,27 @@
 export default {
     country: 'Германия',
-    pathPage: 'germany ',
+    pathPage: 'germany',
     urlImageFlagCountry: require('@/assets/flags/germaniya.png'),
+    urlImageMapCountry: require('@/assets/maps/argentina.png'),
     items: [
         {
             id: 1,
-            name: 'winewegarht-1',
-            sugar: 'сухое',
-            flagFavoritesWine: false
+            urlImageWineItem: require('@/assets/item-test.png'),
+            name: 'Pinot Noir. 1500. Pago del Mare Noswwsstru222m2',
+            sugar: 'Cухое',
+            capacity: '0.75',
+            colorWine: 'Красное',
+            // избранное
+            flagFavoritesWine: false,
+            countryInItem: "Германия"
         },
         {
             id: 2,
-            name: 'wine-wefdb2',
+            name: 'wine-2efwewewqqqweqsqwqqqqq',
             sugar: 'сухое',
-            flagFavoritesWine: false
+            flagFavoritesWine: false,
+            countryInItem: "Германия"
         },
-        {
-            id: 3,
-            name: 'wine-3wgwgw',
-            sugar: 'сухое',
-            flagFavoritesWine: false
-        },
-        {
-            id: 4,
-            name: 'wine-4gjgjghjgj',
-            sugar: 'сухое',
-            flagFavoritesWine: false
-        },
-        {
-            id: 5,
-            name: 'wine-5trggw',
-            sugar: 'сухое',
-            flagFavoritesWine: false
-        },
+
     ]
 }

@@ -1,26 +1,26 @@
 export default {
-    country: 'Италия',
-    pathPage: 'italy',
-    urlImageFlagCountry: require('@/assets/flags/italiya.png'),
+    country: 'Новая зеландия',
+    pathPage: 'new-zealand',
+    urlImageFlagCountry: require('@/assets/flags/novaya_zelandiya.png'),
     urlImageMapCountry: require('@/assets/maps/argentina.png'),
     items: [
         {
             id: 1,
             urlImageWineItem: require('@/assets/item-test.png'),
-            name: 'Pinot Noir. 1500. Pago del Mare qqqNostru222m2',
+            name: 'Pinot Noir. 1500. Pago del Mare Noswwsstru222m2',
             sugar: 'Cухое',
             capacity: '0.75',
             colorWine: 'Красное',
             // избранное
             flagFavoritesWine: false,
-            countryInItem: "Италия"
+            countryInItem: "Новая зеландия"
         },
         {
             id: 2,
-            name: 'wine-2efweweccccwqqqweqqqqqq',
+            name: 'wine-2efwewewqqqweqsqwqqqqq',
             sugar: 'сухое',
-            flagFavoritesWine: true,
-            countryInItem: "Италия"
+            flagFavoritesWine: false,
+            countryInItem: "Новая зеландия"
         },
 
     ]

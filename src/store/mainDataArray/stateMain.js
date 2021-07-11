@@ -17,11 +17,14 @@ const state = () => ({
     // ------------------------------
     ArrayWithNameWineInSearch: [],
     mainSearchValue: '',
-    arrayResultSearchItemsWine: []
+    arrayResultSearchItemsWine: [],
     // import objectStateMainSearchHeader from '@/store/components/main-search/state.js'
     // objectStateMainSearchHeader,
     // ------------------------------
 
+    // pagination-component -test page
+    perPage: 2,
+    pagination: {},
 
 })
 

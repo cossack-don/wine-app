@@ -4,7 +4,7 @@ const routes = [
     {
         path: '/spain',
         name: 'spain',
-        component: () => import(/* webpackChunkName: "about" */ '@/views/pages/spain.vue')
+        component: () => import(/* webpackChunkName: "about" */ '@/views/pages/countries-of-the-world/France.vue')
 
     },
     {

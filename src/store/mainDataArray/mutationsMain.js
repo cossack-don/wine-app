@@ -7,11 +7,13 @@ import MUTATION_ADD_FAVORITES from '@/store/components/template-card-wine-mini/m
 
 import MUTATION_SEARCH_WINE from '@/store/components/main-search/mutations.js'
 
-
+// test
+// import MUTATION_PAGINATION_WINE from '@/store/components/pagination/mutations.js'
 const mutations = {
     MUTATION_FLAG_BTN_LEFT_SIDEBAR,
     ...MUTATION_ADD_FAVORITES,
     MUTATION_SEARCH_WINE,
+    // MUTATION_PAGINATION_WINE
 
 }
 

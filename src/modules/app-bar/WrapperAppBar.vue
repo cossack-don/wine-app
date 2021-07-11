@@ -4,6 +4,7 @@
 
     <FavoritesCounterIcon />
     <SearchInput />
+
     <ResultSearchLink />
     <SwitchModeTheme />
 

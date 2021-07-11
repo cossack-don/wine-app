@@ -61,7 +61,15 @@
           </v-hover>
         </v-col>
       </v-row>
-      <v-row v-else><v-col>Cовпадений нет</v-col></v-row>
+      <v-row v-else
+        ><v-col
+          class="card d-flex justify-center flex-column align-center"
+          cols="12"
+          ><v-alert color="primary" elevation="7" type="info" width="50%"
+            >Поиск пуст</v-alert
+          >
+          <img src="@/assets/bg-search.png" alt="" /></v-col
+      ></v-row>
     </v-container>
 
     <!-- 

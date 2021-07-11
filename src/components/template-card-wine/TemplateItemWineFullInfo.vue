@@ -8,7 +8,7 @@
               :to="`/${urlCountry}`"
               class="home-page__link-all-country d-block mt-4"
             >
-              Все позиции {{ russianNameCountry }}
+              Все позиции страны {{ russianNameCountry }}
             </router-link>
           </div>
           <v-card

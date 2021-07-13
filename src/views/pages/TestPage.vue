@@ -4,7 +4,7 @@
       <!-- адаптив https://vuetifyjs.com/en/components/grids/#usage -->
       <v-col
         class="card list-group-item"
-        v-for="(item, index) in collection"
+        v-for="(item, index) in collectionItemsFromMixin"
         :key="index"
         cols="12"
         :xl="2"
@@ -75,12 +75,15 @@
 
 <script>
 import { mapGetters, mapActions, mapMutation, mapState } from "vuex";
-import lodashFunction_range from "lodash/range";
-import lodashFunction_slice from "lodash/slice";
+// import lodashFunction_range from "lodash/range";
+// import lodashFunction_slice from "lodash/slice";
 import TemplateMiniItemWine from "@/components/template-card-wine/TemplateItemWineMini.vue";
 
+// удалить потом из этой папки тест файл
+import test from "@/plugins/test.js";
 // НУЖНО ПЕРЕНОСИТЬ В СТОР И ПРОДУМАТЬ ГДЕ ОТОБРАЖАТЬ И КАК ОТОБРАЖАТЬ ПАГИНАЦИЮ И КАК БЫТЬ ПО СТРАНАМ В ОТДЕЛЬНОСТИ
 export default {
+  mixins: [test],
   components: {
     TemplateMiniItemWine,
   },
@@ -88,9 +91,9 @@ export default {
     return {
       isActive: false,
       // perPage- кол-во товаров на странице
-      perPage: 2,
+      // perPage: 2,
       // кол-во кнопок пагинации
-      pagination: {},
+      // pagination: {},
     };
   },
 
@@ -99,16 +102,15 @@ export default {
       objectCountry: (state) => state.arrayItems[0],
     }),
 
-    collection() {
-      // получаем из конкретной страны массив с товарами
-      return this.paginate(this.objectCountry.items);
-    },
+    // collection() {
+    //   // получаем из конкретной страны массив с товарами
+    //   return this.paginate(this.objectCountry.items);
+    // },
   },
   methods: {
-    setPage(p, index) {
-      this.pagination = this.paginator(this.objectCountry.items.length, p);
-    },
-
+    // setPage(p, index) {
+    //   this.pagination = this.paginator(this.objectCountry.items.length, p);
+    // },
     // let a = document.querySelectorAll(".bq");
     // console.log(a);
     // a.find((item) => {
@@ -117,33 +119,30 @@ export default {
     //   }
     // });
     //
-
-    paginate(data) {
-      return lodashFunction_slice(
-        data,
-        this.pagination.startIndex,
-        this.pagination.endIndex + 1
-      );
-    },
-
-    paginator(totalItems, currentPage) {
-      const startIndex = (currentPage - 1) * this.perPage,
-        endIndex = Math.min(startIndex + this.perPage - 1, totalItems - 1);
-
-      return {
-        currentPage: currentPage,
-        startIndex: startIndex,
-        endIndex: endIndex,
-        pages: lodashFunction_range(
-          1,
-          Math.ceil(totalItems / this.perPage) + 1
-        ),
-      };
-    },
+    // paginate(data) {
+    //   return lodashFunction_slice(
+    //     data,
+    //     this.pagination.startIndex,
+    //     this.pagination.endIndex + 1
+    //   );
+    // },
+    // paginator(totalItems, currentPage) {
+    //   const startIndex = (currentPage - 1) * this.perPage,
+    //     endIndex = Math.min(startIndex + this.perPage - 1, totalItems - 1);
+    //   return {
+    //     currentPage: currentPage,
+    //     startIndex: startIndex,
+    //     endIndex: endIndex,
+    //     pages: lodashFunction_range(
+    //       1,
+    //       Math.ceil(totalItems / this.perPage) + 1
+    //     ),
+    //   };
+    // },
   },
-  created() {
-    this.setPage(1);
-  },
+  // created() {
+  //   // this.setPage(1);
+  // },
 };
 </script>
 

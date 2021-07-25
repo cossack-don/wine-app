@@ -38,7 +38,8 @@
         </div>
       </div>
       <!-- НЕ УСПЕЛ ДОДЕЛАТЬ КОМПОНЕНТ - НУЖНО ПЕРЕДАТЬ КЛИК В ДОЧЕРНИЙ КОМПОНЕНТ(В ПАГИНАЦИЮ) -->
-      <!-- <testBtns :pagination="pagination" @click="test" /> -->
+      <!-- <testBtns :pagination="pagination" @click="test(index, index)" /> -->
+      <!-- :pagination="pagination" @click.prevent="setPage(p, index)" -->
     </v-container>
   </div>
 </template>
@@ -59,7 +60,13 @@ export default {
     }),
   },
   components: { TemplateMiniItemWine, testBtns },
-  methods: {},
+  // для компонента кнопки не доделал
+  // methods: {
+  //   test(item, index) {
+  //     console.log(item, index);
+  //     this.$emit("SEND", item);
+  //   },
+  // },
 };
 </script>
 

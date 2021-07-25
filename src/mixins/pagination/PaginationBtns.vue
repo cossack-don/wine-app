@@ -13,6 +13,7 @@
         :key="index"
         @click.prevent="setPage(p, index)"
       >
+        <!-- @click.prevent="setPage(p, index)" -->
         {{ p }}
       </v-btn>
     </div>
@@ -26,6 +27,7 @@ export default {
       type: Object,
     },
   },
+  methods: {},
 };
 </script>
 

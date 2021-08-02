@@ -4,39 +4,6 @@
 
     <SliderCountryWines />
     <BtnLinkAllCountry />
-    можно сделать, все вина перейдя на страницу будет сортировка по
-    красным,белым, розовым, выбрать страну
-    <!-- <globalComponentBtnLinkAllCountry /> -->
-    <!-- Потом делать -->
-
-    <!-- <h1>слайдер по сахару</h1>
-    <carousel :per-page="3">
-      <slide> Сухое </slide>
-      <slide> Полусухое </slide>
-      <slide> Полусладкое </slide>
-      <slide> Сладкое </slide>
-    </carousel>
-    <h1>слайдер по цвету</h1>
-    <carousel :per-page="3">
-      <slide>
-        <img src="../assets/color-wine-slider/red-wine.jpg" alt="" class="fl" />
-      </slide>
-      <slide>
-        <img
-          src="../assets/color-wine-slider/white-wine.jpg"
-          alt=""
-          class="fl"
-        />
-      </slide>
-      <slide>
-        <img
-          src="../assets/color-wine-slider/rose-wine.jpg"
-          alt=""
-          class="fl"
-        />
-      </slide>
-    </carousel> -->
-    <!-- {{ t }} -->
   </div>
 </template>
 
